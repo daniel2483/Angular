@@ -1,5 +1,20 @@
-<p>Testing---- {{ stringInterpolation }}</p>
-<button class="btn btn-primary" name="button" [disabled]="!propertyBinding">
+
+<h1>I am an Angular Test</h1>
+<p>Testing---- {{ stringInterpolation }}</p> <!-- String Interpolation-->
+<label for="">Server Name: </label>
+<input type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)"> <!--Other Event Binding-->
+<p>{{ serverName }}</p>
+<input type="text"
+  class="form-control"
+  [(ngModel)]="serverName"> <!--Two Way Binding and Directives-->
+<button
+  class="btn btn-primary"
+  name="button"
+  [disabled]="!propertyBinding"
+  (click)="onCreateServer()"
+  Add Server> <!-- Property Binding and Event Binding-->
   Add Server
 </button>
 
@@ -7,8 +22,8 @@
   {{ propertyBinding }}
 </p>
 
-<p>Servers Present</p>
-<app-servers></app-servers>
-<app-servers></app-servers>
+{{ serverCreationStatus }}
+<br>
+Lists:
 <app-servers></app-servers>
 <app-servers></app-servers>
