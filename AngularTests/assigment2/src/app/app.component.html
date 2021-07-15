@@ -1,0 +1,26 @@
+<h1>Assignment 2</h1>
+<ol>
+  <li>Add a Input field which updates a property ('username') via Two-Way-Binding</li>
+  <p>
+    <label for="">Username: </label>
+    <input type="text"
+      class="form-control"
+      [(ngModel)]="username"
+      (input)="checkIfEmpty()"
+      > <!--Two Way Binding and Directives-->
+  </p>
+  <li>Output the username property via String Interpolation (in a paragraph below the input)</li>
+  <p>{{ username }}</p> <!-- String interpolation -->
+  <li>Add a button which may only be clicked if the username is NOT an empty string</li>
+  <p>
+    <button
+      name="button"
+      [disabled]="resetButtonDisable"
+      (click)="resetValue()"
+      Add Server> <!-- Property Binding and Event Binding-->
+      Reset to an empty string
+    </button>
+  </p>
+  <li>Upon clicking the button, the username should be reset to an empty string</li>
+    <p>Button is disabled: {{ resetButtonDisable }}</p>
+</ol>
