@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/forms';
-import { NgModule } from '@angular/forms';
+
 
 
 @Component({
@@ -10,18 +8,12 @@ import { NgModule } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 
-@NgModule({
-  imports: [
-             BrowserModule,
-             FormsModule      //<----------make sure you have added this.
-           ]
-})
 
 export class AppComponent {
   stringInterpolation = 'Hola Mundo!';
   propertyBinding = false;
   serverCreationStatus = 'No server was created!'
-  serverName = 'Test'
+  serverName = 'Server Test'
 
   constructor(){
     setTimeout(()=>{
@@ -30,7 +22,7 @@ export class AppComponent {
   }
 
   onCreateServer(){
-    this.serverCreationStatus = 'Server was created'
+    this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
   }
 
   onUpdateServerName(event: any){
