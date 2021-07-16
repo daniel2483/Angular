@@ -33,13 +33,19 @@ Lists:
 <h2>Testing Directives</h2>
 Directives:
 <br>
-1. If
+1. Directive: ngIf
 <p *ngIf="serverCreated">Server Name is: {{ serverName }}</p>
 <br>
-2. If/else
+2. Directive: ngIf;else
 <p *ngIf="serverCreated; else noServer">
   Server Name is: {{ serverName }}
 </p>
 <ng-template #noServer> <!--Local ref-->
   <p>No server was created!</p>
 </ng-template>
+3. Directive: ngStyle
+<br>
+4. Directive: ngClass
+<br>
+4. Directive: ngFor
+<app-servers *ngFor="let server of servers"></app-servers>

@@ -15,6 +15,7 @@ export class AppComponent {
   serverCreationStatus = 'No server was created!'
   serverName = 'Server Test'
   serverCreated = false;
+  servers = ['Testserver', 'Testserver 2','Testserver 3'];
 
   constructor(){
     setTimeout(()=>{

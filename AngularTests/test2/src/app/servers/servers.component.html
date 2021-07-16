@@ -1,1 +1,6 @@
-<p>Server Name: server1, IP: 10.20.10.11, Status: Online</p>
+<p
+  [ngStyle]="{backgroundColor: getColor()}"
+  [ngClass]="{online: serverStatus === 'online'}"
+  >
+  Server Name: server1, IP: 10.20.10.11, Status: {{ serverStatus }}
+</p>
