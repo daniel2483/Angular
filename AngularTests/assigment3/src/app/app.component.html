@@ -17,7 +17,7 @@
 <!-- First five values -->
 <div >
   <p
-    *ngFor="let paragraph of paragraphsLessThanFive">
+    *ngFor="let paragraph of paragraphsLessThanFive; let i = index">
     {{ paragraph }}
   </p>
 </div>
