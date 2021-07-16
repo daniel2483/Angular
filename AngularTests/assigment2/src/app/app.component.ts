@@ -14,7 +14,7 @@ export class AppComponent {
     this.username = (<HTMLInputElement>event.target).value;
   }
 
-  checkIfEmpty(event: any){
+  checkIfEmpty(){
     if (this.username != ''){
       this.resetButtonDisable = false;
     }
